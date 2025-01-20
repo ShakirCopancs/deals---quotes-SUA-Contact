@@ -1,0 +1,61 @@
+.empty-card {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #d2d2d6;
+    border-radius: 5px;
+    width: 100%;
+    background: #e7f5fb;
+    font-family: CiscoSans, Arial, sans-serif;
+    margin-top: 5px;
+}
+
+.empty-card.super-admin-card {
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    margin-top: 15px;
+    min-height: 95px;
+}
+
+.cui .contact-count {
+    color: red;
+}
+
+.required {
+    color: red !important;
+    font-size: 13px;
+}
+
+.empty-card h3.widget-title {
+    font-weight: 400;
+    color: #333;
+    padding: 10px 0 0;
+    font-size: 2rem;
+}
+
+.empty-card .left-panel .order-icon-add-user span:before {
+    font-size: 70px !important;
+}
+
+
+.cui .form-group .form-group__text input.disabled~label,
+.cui .form-group .form-group__text input[disabled]~label,
+.cui .form-group .form-group__text select.disabled~label,
+.cui .form-group .form-group__text select[disabled]~label,
+.cui .form-group .form-group__text textarea.disabled~label,
+.cui .form-group .form-group__text textarea[disabled]~label {
+    opacity: .5;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.cui .form-group .form-group__text input,
+.cui .form-group .form-group__text select,
+.cui .form-group .form-group__text textarea {
+
+    flex: 1;
+    flex-shrink: 0;
+    order: 3;
+
+}

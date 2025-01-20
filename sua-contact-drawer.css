@@ -1,0 +1,396 @@
+.cui.drawer .modal {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 2002 !important;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    background-color: #00000080;
+
+}
+
+.cui.drawer .modal.modal--large .modal__dialog {
+    width: 920px;
+}
+
+.cui.drawer .modal .modal__dialog {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+}
+
+.cui.drawer .modal.modal-right .modal__dialog {
+    align-self: flex-end;
+}
+
+.cui.drawer .modal .modal__dialog .modal__content .modal__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: #f1f7fd;
+}
+
+.cui .modal .modal__content .modal__close {
+    position: absolute;
+    color: #495057;
+}
+
+.cui .modal .modal__content .modal__close:hover {
+    text-decoration: none;
+}
+
+.cui.drawer .modal .modal__dialog .modal__content .modal__header a.modal__close {
+    right: 2.25rem !important;
+    top: .75rem !important;
+}
+
+.cui.drawer .modal .modal__dialog .modal__content .modal__header h3 {
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-top: 0;
+    font-size: 1.6rem;
+}
+
+.cui.drawer .modal .modal__dialog .modal__content .modal__body {
+    padding: 1rem 2.25rem;
+    padding-bottom: 0px;
+    height: calc(100vh - 10rem);
+    overflow: auto;
+}
+
+.cui.drawer .modal p {
+    line-height: 18px;
+    margin: 10px 0 0;
+    font-size: 13px;
+}
+
+.cui.drawer .modal .modal__dialog .modal__content .modal__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1.5rem 2.25rem;
+    margin-top: 0;
+    border-top: 1px solid #e4e4e4;
+}
+
+.cui .btn.btn--primary[disabled] {
+    cursor: default;
+    color: #fff;
+    background: #aeb8c1 !important;
+    border-color: #aeb8c1;
+}
+
+.cui hr {
+    border-bottom: 1px solid #dee2e6;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: #dee2e6;
+    margin: 16px 0;
+}
+
+.cui.drawer .sa-contact {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100% - 64px);
+}
+
+.cui.drawer .sa-contact .left-panel {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.cui .flex-between {
+    justify-content: space-between;
+}
+
+.cui .flex-middle,
+.cui .flex-center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.cui .columns-view ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cui .columns-view ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px 15px;
+}
+
+.cui .columns-view li .checkbox {
+    padding-right: 5px;
+    position: relative;
+    top: 3px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cui .checkbox .checkbox__label {
+    color: #333333;
+    font-size: 14px;
+    padding-left: 5px;
+    margin-left: 5px;
+    line-height: 18px;
+    text-transform: uppercase !important;
+    font-weight: 400;
+}
+
+.cui .checkbox input {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: 0;
+    cursor: pointer !important;
+    width: 16px;
+    height: 16px;
+}
+
+.cui .checkbox .checkbox__input {
+    position: relative;
+    display: inline-flex;
+    min-width: 16px;
+    border: 1px solid #adb5bd;
+    outline: 1px transparent;
+    border-radius: 0px;
+    background: #fff;
+    width: 18px !important;
+    height: 18px !important;
+    line-height: 18px;
+}
+
+.cui .checkbox input.checked~.checkbox__input,
+.cui .checkbox input:checked~.checkbox__input {
+    background-color: #059fd9 !important;
+    border: #059fd9 !important;
+}
+
+
+.cui .checkbox .checkbox__input:before,
+.cui .checkbox .checkbox__input:after {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    content: "";
+    pointer-events: none;
+    opacity: 0;
+    transition: all .25s ease;
+}
+
+.cui .checkbox .checkbox__input:after {
+    position: absolute;
+    display: block;
+    left: 6px !important;
+    top: 3px !important;
+    width: 6px;
+    height: 10px;
+    color: transparent;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.cui .checkbox input.checked~.checkbox__input:after,
+.cui .checkbox input:checked~.checkbox__input:after {
+    opacity: 1;
+}
+
+
+.cui .checkbox .checkbox__input:before {
+    border-radius: 0px;
+    opacity: 0;
+}
+
+.cui.drawer .sa-contact .rgt-panel {
+    border-left: solid 1px #ccc;
+    padding-left: 16px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.cui .radio .radio__label {
+    color: #333333;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: calc(16px * .25);
+    line-height: 18px;
+}
+
+.cui .section {
+    padding: 16px 0;
+}
+
+.cui .half-margin-bottom {
+    margin-bottom: 8px !important;
+}
+
+.cui .flex {
+    display: flex;
+}
+
+.cui .form-group.form-group--inline+.form-group.form-group--inline {
+    margin: 0 0 0 16px;
+}
+
+.cui .sa-contact .form-group.form-group--inline+.form-group.form-group--inline {
+    width: 65%;
+}
+
+.cui .radio {
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cui.drawer .radio {
+    margin-right: 2px !important;
+}
+
+.icw input[type=radio] {
+    cursor: pointer !important;
+}
+
+.cui .radio input {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 16px;
+    height: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.cui .radio .radio__input {
+    position: relative;
+    display: inline-flex;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    border: 1px solid #adb5bd;
+    outline: 1px transparent;
+    border-radius: 2rem;
+    background-color: transparent;
+}
+
+.cui .radio input.checked~.radio__input,
+.cui .radio input:checked~.radio__input {
+    background-color: transparent;
+    border: 1px solid #adb5bd;
+}
+
+.cui .radio .radio__input:before,
+.cui .radio .radio__input:after {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    content: "";
+    pointer-events: none;
+    opacity: 0;
+}
+
+.cui .radio .radio__input:before {
+    transition: all .25s ease-in-out;
+    border-radius: 2rem;
+}
+
+.cui .radio .radio__input:before,
+.cui .radio .radio__input:after {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    content: "";
+    pointer-events: none;
+    opacity: 0;
+}
+
+.cui .radio .radio__input:after {
+    transition: all .25s cubic-bezier(.2, .8, .2, 1.2);
+    opacity: 0;
+    border-radius: 2rem;
+    background-color: #00bceb;
+    border: 1px solid #fff;
+}
+
+.cui .radio input.checked~.radio__input:after,
+.cui .radio input:checked~.radio__input:after {
+    border-width: 3px;
+    opacity: 1;
+}
+
+.cui .form-group {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.cui .form-group .form-group__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cui .form-group .form-group__text label {
+    color: #333;
+    font-size: 13px;
+    font-weight: normal !important;
+    margin-bottom: calc(16px * .25);
+}
+
+.cui .form-group .form-group__text input,
+.cui .form-group .form-group__text select,
+.cui .form-group .form-group__text textarea {
+    transition: all .25s ease;
+}
+
+.cui .form-group .form-group__text input,
+.cui input.input-field {
+    background: #fff;
+    color: #333;
+    font-weight: 400;
+    height: 26px;
+    line-height: 16px;
+    outline: 0;
+    width: 97%;
+    border-radius: 3px !important;
+}
+
+.cui.drawer .sa-contact .input-field-override {
+    min-width: 210px !important;
+    min-height: 33px !important;
+    padding: calc(16px * .5);
+    border: 1px solid #dee2e6;
+    border-color: #00bceb !important;
+    background-color: #f4f6f8;
+}
+
+.cui.drawer .sa-contact .input-field-override:focus {
+    background-color: #fff;
+}

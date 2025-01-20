@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="commonApp quotingApp ng-scope hydrated">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Html</title>
+  <!-- Existing current CSS used on live site; please do not use -->
+  <link rel="stylesheet" href="build.vendor.min.css" type="text/css" />
+  <link rel="stylesheet" href="vNextWorkspaceStyle.min.css" type="text/css" />
+  <link rel="stylesheet" href="build.common.min.css" type="text/css" />
+  <!-- Custom css -->
+  <link rel="stylesheet" href="order-fonts.css" type="text/css" />
+  <link rel="stylesheet" href="super-admin-card.css" type="text/css" />
+  <link rel="stylesheet" href="sua-contact-drawer.css" type="text/css" />
+</head>
+
+<body class="has-js ">
+  <div class="quoting-main container-main fixed-layout" style="padding-top: 30px;">
+    <div ui-view="container" class="ng-scope">
+      <div class="review ng-scope">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 col-sm-12 review-total-panel ng-scope"></div>
+          <div class="col-sm-12 col-lg-6 col-md-5">
+
+
+
+
+            <div class="cui drawer super-admin-drawer">
+              <!-- Super Admin Card  Start-->
+              <div class="empty-card super-admin-card is-sua-component-enabled">
+                <div class="left-panel"><span class="order-icon-add-user"><span class="path1"></span><span
+                      class="path2"></span><span class="path3"></span><span class="path4"></span></span></div>
+                <div class="right-panel">
+                  <h3 class="widget-title">End Customer Super User Admin Contacts <span class="required">*</span>
+                    <span class="order-icon-info-dark"></span>
+                  </h3>
+                  <p class="font-size-override"><span class="contact-count">0 </span> Contact Selected <a
+                      class="split-link" onclick="toggleDisplay()" href="javascript:void(0)">Edit
+                      Details Here</a></p>
+                </div>
+              </div>
+              <!-- Super Admin Card  End-->
+              <!-- Super Admin Drawer  Start-->
+              <div class="modal modal--large modal-right" id="modal-large" style="display: none;">
+                <div class="modal__dialog">
+                  <div class="modal__content no-padding">
+                    <div class="modal__header no-margin">
+                      <h3>Success Track End Customer Super User Admin Contact </h3><a href="javascript:void(0)"
+                        class="modal__close text-size-14" data-tracking-id="add-super-user-modal-close-icon"
+                        onclick="toggleDisplay()"><span class="text-size-14 order-icon-close"></span></a>
+                    </div>
+                    <div class="modal__body no-padding-bottom">
+                      <p class="half-margin-top">The Quote/Deal has Success Track Lines and requires Super User Admin
+                        Contacts provided for all the End Customers GU ID's to be able to proceed with ordering process.
+                      </p>
+                      <hr style="margin-bottom: 0px;">
+                      <div class="row sa-contact">
+                        <div class="col-md-6 left-panel">
+                          <div class="customer-list">
+                            <div class="flex flex-between flex-middle">
+                              <p class="no-margin">Select End Customer GU ID / Name <span class="required">*</span></p>
+
+                            </div>
+                            <div class="columns-view">
+                              <ul class="scroll-list list-height-override">
+                                <li><label class="checkbox"><input type="checkbox" name="guIdItemCheckbox"
+                                      value="379964146"><span class="checkbox__input"></span><span
+                                      class="checkbox__label checkbox__label__uppercase">MERCEDES-BENZ GROUP AG
+                                      (379964146)</span></label></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 rgt-panel">
+                          <p class="no-margin">Please provide CCO ID or Business / Primary Email Address for GU ID's</p>
+                          <div class="section flex half-margin-bottom">
+                            <div class="form-group form-group--inline"><label class="radio disabled"><input type="radio"
+                                  name="email-radio" class="ccoID" value="CCO_ID" checked><span
+                                  class="radio__input"></span><span class="radio__label text-tranform-override">CCO
+                                  ID</span></label></div>
+                            <div class="form-group form-group--inline"><label class="radio disabled"><input type="radio"
+                                  name="email-radio" class="primID" value="EMAIL"><span
+                                  class="radio__input"></span><span class="radio__label text-tranform-override">Business
+                                  / Primary Email
+                                  Address</span></label></div>
+                          </div>
+                          <div class="row ccoID-form font-size-override">
+                            <div class="col-md-6">
+                              <div class="form-group base-margin-bottom">
+                                <div class="form-group__text">
+
+                                  <input class="input-field-override input-field-focus" id="cisco-email" type="text"
+                                    disabled>
+                                  <label for="cisco-email">Cisco.com User ID<span class="required">*</span></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row font-size-override prim-form" style="display: none;">
+                            <div class="col-md-12">
+                              <div class="form-group base-margin-bottom">
+                                <div class="form-group__text">
+                                  <label for="">Business / Primary
+                                    Email Address<span class="required">*</span></label>
+                                  <input class="input-field-override input-field-focus" id="business-email" type="text">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal__footer base-margin-bottom no-margin-top"><input type="button"
+                        class="btn btn--primary super-user-margin-top su-save" value="Save" disabled></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Super Admin Drawer End-->
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Script to toggle the display of the Super Admin Drawer -->
+  <script>
+    function toggleDisplay() {
+      const content = document.querySelector('.modal--large');
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'flex';
+      } else {
+        content.style.display = 'none';
+      }
+    }
+  </script>
+
+  <!-- Enable or disable form elements based on checkbox state -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const checkbox = document.querySelector('input[name="guIdItemCheckbox"]');
+      const radios = document.querySelectorAll('input[name="email-radio"]');
+      const textInput = document.getElementById("cisco-email");
+      checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+          radios.forEach(radio => {
+            radio.disabled = false;
+            radio.closest("label").classList.remove("disabled");
+          });
+          textInput.disabled = false;
+        } else {
+          radios.forEach(radio => {
+            radio.disabled = true;
+            radio.closest("label").classList.add("disabled");
+          });
+          textInput.disabled = true;
+        }
+      });
+    });
+  </script>
+
+  <!-- Show or hide specific fields based on the selected radio button -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ccoIDRadio = document.querySelector('input[name="email-radio"][value="CCO_ID"]');
+      const emailRadio = document.querySelector('input[name="email-radio"][value="EMAIL"]');
+
+      const ccoIDForm = document.querySelector(".ccoID-form");
+      const primForm = document.querySelector(".prim-form");
+
+      ccoIDRadio.addEventListener("change", function () {
+        if (ccoIDRadio.checked) {
+          ccoIDForm.style.display = "block";
+          primForm.style.display = "none";
+        }
+      });
+
+      emailRadio.addEventListener("change", function () {
+        if (emailRadio.checked) {
+          primForm.style.display = "block";
+          ccoIDForm.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
